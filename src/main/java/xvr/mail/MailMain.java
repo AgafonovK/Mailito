@@ -37,7 +37,7 @@ public class MailMain {
 
     public static void main (String[] args) throws Exception {
          String username = "testtesttest-1980@mail.ru";
-         String password = "rbylpflpf";
+         String password = "";
          String hostSmtp = "smtp.mail.ru";
          String imapPort = "993";
          String pop3host = "pop.mail.ru";

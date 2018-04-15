@@ -1,26 +1,23 @@
-package xvr.mail;
-
-import com.sun.prism.shader.Solid_TextureYV12_AlphaTest_Loader;
+/*package xvr.mail;
 
 import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import java.nio.file.FileSystemAlreadyExistsException;
 import java.util.Properties;
 
-class EmailAuth extends Authenticator{
+class EmailAuth extends Authenticator {
     private String login;
     private String password;
 
-    public EmailAuth(final String login, final String password){
+    public EmailAuth(final String login, final String password) {
         this.login = login;
         this.password = password;
 
     }
-    public PasswordAuthentication getPasswordAuthentication(){
-        return new PasswordAuthentication(login,password);
+
+    public PasswordAuthentication getPasswordAuthentication() {
+        return new PasswordAuthentication(login, password);
     }
 }
+
 public class MailMain {
 /*
 Сервер входящей почты IMAP-сервер — imap.mail.ru
@@ -34,14 +31,14 @@ public class MailMain {
  SMTP — 25, 587 или 2525 (без шифрования) и 465 (с шифрованием) .
 
  */
-
-    public static void main (String[] args) throws Exception {
-         String username = "testtesttest-1980@mail.ru";
-         String password = "";
-         String hostSmtp = "smtp.mail.ru";
-         String imapPort = "993";
-         String pop3host = "pop.mail.ru";
-         String imapHost = "imap.mail.ru";
+/*
+    public static void main(String[] args) throws Exception {
+        String username = "testtesttest-1980@mail.ru";
+        String password = "rbylpflpf1980rbylpflpf";
+        String hostSmtp = "smtp.mail.ru";
+        String imapPort = "993";
+        String pop3host = "pop.mail.ru";
+        String imapHost = "imap.mail.ru";
 
 
         Properties properties = new Properties();
@@ -51,10 +48,10 @@ public class MailMain {
         properties.put("mail.imap.port", imapPort);
 
         Authenticator authenticator = new EmailAuth(username,
-                                                    password);
-        Session session = Session.getDefaultInstance(properties,authenticator);
+                password);
+        Session session = Session.getDefaultInstance(properties, authenticator);
         Store store = session.getStore();
-        store.connect(imapHost,username,password);
+        store.connect(imapHost, username, password);
 
         Folder inbox = store.getFolder("INBOX");
         inbox.open(Folder.READ_ONLY);
@@ -66,16 +63,16 @@ public class MailMain {
         //TO DO Multipart Null
         Multipart multipart = (Multipart) message.getContent();
 
-        if (multipart==null){
+        if (multipart == null) {
             System.out.println("mult null");
             System.exit(0);
         }
 
-        for (int i =0; i<multipart.getCount(); i++){
+        for (int i = 0; i < multipart.getCount(); i++) {
             BodyPart bodyPart = multipart.getBodyPart(i);
-            if (bodyPart.getFileName()==null){
+            if (bodyPart.getFileName() == null) {
                 System.out.println(" " + i + " " + bodyPart.getContent());
-            }else {
+            } else {
                 System.out.println(" " + i + " " + bodyPart.getFileName());
             }
         }
@@ -86,3 +83,4 @@ public class MailMain {
     }
 
 }
+*/
